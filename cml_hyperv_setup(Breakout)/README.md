@@ -1,8 +1,8 @@
 # Hyper-V Cisco Modeling Labs (CML) with external access (Breakout)
 
-Commit change 10-28-2025
+_Commit change 10-28-2025
 (This is now considered defunct. This was originally implemented as a workaround for using VMWare and to allow external hosts to remote into the CML labs for automation tasks since wireless full-bridge
-MAC spoofing wasn't supported by my host devices. I have ultimately opted for ethernet connections to allow the external connectors to request IP addresses from the DHCP server.)
+MAC spoofing wasn't supported by my host devices. I have ultimately opted for ethernet connections to allow the external connectors to request IP addresses from the DHCP server.)_
 
 
 Behold! An alternative to the VMware setup.
