@@ -6,6 +6,6 @@ automation is only becoming more of a pressing need in today's environment, even
 
 Attached in this directory a golden framework .yaml file for CML to serve as a springboard and baseline template to save time manually configuring everything:
 
-![alt text](https://github.com/SaiyaNetworking/CML_labs/blob/main/cml_hyperv_setup/pics/Golden_framework_pic.png)
+![alt text](https://github.com/SaiyaNetworking/CML_labs/blob/main/cml_hyperv_setup/pics/golden_framework_pic.png)
 
 The .yaml file can be edited to add in your own interface addresses but it might be easier to do it within CML itself and save your own golden framework.
