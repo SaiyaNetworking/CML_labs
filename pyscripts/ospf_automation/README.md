@@ -17,7 +17,7 @@
 * Output text file named `Routers_ospf_{datetime.now().strftime('%Y%m%d_%H%M%S')}.txt`
 
 A sample text file has also been uploaded showing the output of the configuration pull: 
-(placeholder)
+[Routers_ospf_20251203_125657.txt](https://github.com/SaiyaNetworking/CML_labs/blob/main/pyscripts/ospf_automation/Routers_ospf_20251203_125657.txt)
 
 ### `ospf_deployment_automation.py` and `ospf_configpull_automation.py`
 Prerequisites to run the scripts if repurposed will be:
