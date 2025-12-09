@@ -38,5 +38,41 @@ This is the lab topology used for the scripts
 
 ![alt text](https://github.com/SaiyaNetworking/CML_labs/blob/main/pyscripts/eigrp_automation/eigrp_topology.png)
 
+# OSPF automation part 2 - multi-area deployments, area summary routes and DR/BDR setups
 
-## Part 2 will include multi-area deployments, area summary routes and DR/BDR setups
+`ospf_deployment__multiarea_automation.py` is a two-part script using an enumerated index to deploy OSPF to five different routers via telnet with the configurations of:
+* OSPF 1 areas 0, 10 and 20
+* 10.0.0.0/24 - 10.0.4.0/24 network range
+* Loopback interfaces advertised on 192.168.100.0/24 - 192.168.104.0/24
+* Autocost reference bandwidth of 100gbps
+* Passive interface on R1's g0/2 interface
+* R1
+    * Route summarization of 10.0.0.0/16 for area 0
+    * Route summarization of 192.168.1.0/24 for area 20 (external networks)
+    * Gateway of last resort advertised
+    * Set up as an Area Border Router (ABR)
+* R2
+    * Backbone router (area 0)
+    * Designated Router (DR)
+* R3
+    * Backbone router
+    * Backup Designated Router (BDR) 
+* R4
+    * Route summarization of 10.0.4.0/24 for area 10
+    * Route summarization of 10.0.0.0/16 for area 0
+* R5
+  * Router with networks of 10.0.0.0/16 and 192.168.100.0/24 advertised on area 10
+* A second loop of the script to use the "clear ip ospf process" command to elect the proper DR/BDR configurations
+
+`ospf_configpull_automation.py` can also be used with this script with a sample printed out here: [Routers_ospf_areas_20251208_172128.txt](https://github.com/SaiyaNetworking/CML_labs/blob/main/pyscripts/ospf_automation/Routers_ospf_areas_20251208_172128.txt)
+
+Prerequisites will be same as for part one
+
+Cisco Modeling Lab (CML) yaml files `OSPF_automation_multi-area_preconfig.yaml` and `OSPF_automation_multi-area_postconfig.yaml` will be uploaded as pre-configured automation 
+and post-configured automation labs
+
+This is the lab topology used for the scripts
+
+![alt text](https://github.com/SaiyaNetworking/CML_labs/blob/main/cml_hyperv_setup/pics/ospf_areas_topology.png)
+
+
